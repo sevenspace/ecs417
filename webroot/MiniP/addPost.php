@@ -25,15 +25,10 @@
   {
     $sql = "INSERT INTO blogposts (title, username, posts, date, time)
     VALUES ('$title','$name','$posts','$date','$time')";
-
-      if($conn->query($sql))
-    {
-      $conn->close();
-
-      header("location: index.php");
-    }
+    $conn->query($sql);
+    echo $conn->connect_error;
   }
 
-//  $conn->close();
-  //header("location: blog.php");
+  $conn->close();
+  header("location: blog.php");
 ?>
