@@ -70,7 +70,7 @@
 		</div>
 
 		<figure>
-			<img class="img1" src="front.jpeg" alt="noblerot" width="350" height="250">
+			<img class="img1" src="front.jpeg" alt="noblerot" width="320" height="230">
 		</figure>
 
 		<figure>
@@ -118,7 +118,7 @@
 		</div>
 
 		<figure>
-			<img class="img5" src="poster.JPG" alt="graphics" width="380" height="240">
+			<img class="img5" src="poster.JPG" alt="graphics" width="180" height="240">
 		</figure>
 
 		<figure>
