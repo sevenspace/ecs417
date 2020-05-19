@@ -86,10 +86,11 @@
 
 			<?php
 
-				$dbhost = "localhost";
-				$dbuser = "root";
-				$dbpass = "";
-				$db = "blog";
+				$dbhost = getenv("MYSQL_SERVICE_HOST");
+				$dbport = getenv("MYSQL_SERVICE_PORT");
+				$dbuser = getenv("DATABASE_USER");
+				$dbpwd = getenv("DATABASE_PASSWORD");
+				$dbname = getenv("DATABASE_NAME");
 				$conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
 
 				if ($conn->connect_error)
@@ -113,7 +114,7 @@
 							$sql = "SELECT * FROM blogposts WHERE MONTH(date)=".$_GET['months']." ORDER BY date, time ASC";
 						}
 					}
-					
+
 					$result = $conn->query($sql);
 					$array = array();
 

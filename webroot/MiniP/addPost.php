@@ -9,10 +9,11 @@
     $time = date("h:i:sa");
   }
 
-  $dbhost = "localhost";
-  $dbuser = "root";
-  $dbpass = "";
-  $db = "blog";
+  $dbhost = getenv("MYSQL_SERVICE_HOST");
+  $dbport = getenv("MYSQL_SERVICE_PORT");
+  $dbuser = getenv("DATABASE_USER");
+  $dbpwd = getenv("DATABASE_PASSWORD");
+  $dbname = getenv("DATABASE_NAME");
   $conn = new mysqli($dbhost, $dbuser, $dbpass,$db);
 
   if ($conn->connect_error)
