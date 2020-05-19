@@ -1,0 +1,116 @@
+<html>
+	<header lang="en">
+		<meta charset ="utf-8">
+		<title>Add Post</title>
+	</header>
+
+	<head>
+			<link rel="stylesheet" type="text/css" href="reset.css">
+			<link rel="stylesheet" type="text/css" href="addPost.css">
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li><a class="a1" href="index.php">About me</a>
+				<li><a class="a1" href="skills.php">Education and Skills</a>
+				<li><a class="a1" href="portfolio.php">Experience and Portfolio</a>
+				<li><a class="a1" href="blog.php">Blog</a>
+					<li><a class="a1" href="logout.php">Logout</a>
+			</ul>
+		</nav>
+
+		<div class="box">
+				<div id="prevBox" class="prevBox">
+					<p id="date" class="date">
+					</p>
+					<p id="ptitle" class="ptitle">
+					</p>
+					<p id="pposts" class="pposts">
+					</p>
+				</div>
+			<form id="addPost" action="addPost.php" onsubmit="return checkEmpty()" method="get">
+				<div class="row">
+					<div class="Headings">
+						<label >Title: </label>
+					</div>
+					<div class="tbox">
+						<input type="text" name="title" id="title" placeholder="Title">
+					</div>
+				</div>
+				<div class="row">
+					<div class="Headings">
+						<label >Post: </label>
+					</div>
+					<div class="tbox">
+						<textarea name="post" id="post" placeholder="Enter your post" style="height:200px"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<input id="clearbutton" type="button" onclick="clearForm()" value="Clear">
+					<input id="prebutton" type="button" onclick="previewPost()" value="Preview">
+					<input type="submit" value="Add">
+				</div>
+			</form>
+
+			<script>
+				function previewPost()
+				{
+					var titlebox = document.getElementById("title").value;
+					var postbox = document.getElementById("post").value;
+
+					document.getElementById("date").innerHTML= new Date();
+					document.getElementById("ptitle").innerHTML=titlebox;
+					document.getElementById("pposts").innerHTML=postbox;
+
+					document.getElementById("date").style.visibility= 'visible';
+					document.getElementById("ptitle").style.visibility= 'visible';
+					document.getElementById("pposts").style.visibility= 'visible';
+					document.getElementById("prevBox").style.visibility='visible';
+
+				}
+			</script>
+
+			<script>
+				function checkEmpty()
+				{
+					var titlebox = document.forms["addPost"]["title"].value;
+					var postbox = document.forms["addPost"]["post"].value;
+					if (titlebox =="" & postbox =="")
+					{
+						document.getElementById("title").style.borderColor="red";
+						document.getElementById("post").style.borderColor="red";
+						alert("Please fill in the fields");
+						return false;
+					}
+					else if (postbox =="")
+					{
+						document.getElementById("post").style.borderColor="red";
+						alert("Please fill in the content of your post");
+						return false;
+					}
+					else if (titlebox =="")
+					{
+						document.getElementById("title").style.borderColor="red";
+						alert("Please fill in title of your post");
+						return false;
+					}
+				}
+			</script>
+
+			<script>
+				function clearForm()
+				{
+					if(confirm("Are you sure you want to clear all fields?"))
+					{
+							document.getElementById("addPost").reset();
+					}
+				}
+			</script>
+
+		</dim>
+		</aside>
+
+
+	</body>
+</html>

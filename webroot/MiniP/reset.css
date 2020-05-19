@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* Reset Document */
+
+html, body, p, section, figure, footer, figcaption, nav, img, header, hgroup, a, ul, li, div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
