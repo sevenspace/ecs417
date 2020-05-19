@@ -34,6 +34,6 @@
     }
   }
 
-  $conn->close();
-  header("location: blog.php");
+//  $conn->close();
+  //header("location: blog.php");
 ?>
