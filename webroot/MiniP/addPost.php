@@ -6,7 +6,7 @@
     $title = $_GET["title"];
     $posts = $_GET["post"];
     $date = date("Y/m/d");
-    $time = date("h:i:sa");
+    $time = date("H:i:s");
   }
 
   $dbhost = getenv("MYSQL_SERVICE_HOST");
