@@ -27,7 +27,7 @@ else
     $login = true;
     session_start();
     $_SESSION['name'] = $username;
-    header("location: blog.php");
+    header("location: addPost.html");
   }
   else {
 //
