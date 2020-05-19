@@ -70,7 +70,7 @@
 		</div>
 
 		<figure>
-			<img class="img1" src="nobleRot.JPG" alt="noblerot" width="350" height="250">
+			<img class="img1" src="front.jpeg" alt="noblerot" width="350" height="250">
 		</figure>
 
 		<figure>
@@ -92,7 +92,7 @@
 		</div>
 
 		<figure>
-			<img class="img3" src="wine.JPG" alt="wine" width="300" height="230">
+			<img class="img3" src="glass.JPG" alt="wine" width="300" height="230">
 		</figure>
 
 		<figure>
