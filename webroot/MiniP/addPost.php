@@ -30,5 +30,5 @@
   }
 
   $conn->close();
-  header("location: blog.php");
+  //header("location: blog.php");
 ?>
