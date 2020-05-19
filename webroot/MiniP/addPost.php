@@ -25,8 +25,13 @@
   {
     $sql = "INSERT INTO blogposts (title, username, posts, date, time)
     VALUES ('$title','$name','$posts','$date','$time')";
-    $conn->query($sql);
 
+      if($conn->query($sql))
+    {
+      $conn->close();
+
+      header("location: index.php");
+    }
   }
 
   $conn->close();
