@@ -35,7 +35,7 @@
               header("location: blog.php");
             }
             else {
-              echo("error 404");
+              echo("error 404".$conn->error);
             }
       }
   /*  if(mysqli_query($conn, $sql)){
