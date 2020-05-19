@@ -24,35 +24,10 @@
 
   else
   {
-    //$sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('$title','$name','$posts','$date','$time')";
-    //$sql = "INSERT INTO `blogposts`(`title`, `username`, `posts`, `date`, `time`) VALUES ('$title','$name','$posts','$date','$time')";
-//$sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('" . $title . "', '" . $name . "','" . $posts . "','" . $date . "','" . $time . "')";
-      if($_SERVER["REQUEST_METHOD"]=="GET")
-      {
-            $sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('$title','$name','$posts','$date','$time')";
-            if($conn->query($sql) === TRUE)
-            {
-              header("location: blog.php");
-            }
-            else {
-              echo("error 404".$conn->error);
-            }
-      }
-  /*  if(mysqli_query($conn, $sql)){
-        echo "<script>
-                alert('Blog Entry Added!');
-                window.location.href='blog.php';
-              </script>";
-    } else {
-        echo "<script>
-                alert('NO ENTRY ADDED! SQL ERROR!');
-              </script>";
-    }
-  */
-  //  $conn->query($sql);
-  //  echo $conn->connect_error;
+      $sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('$title','$name','$posts','$date','$time')";
+      $conn->query($sql);
   }
 
   $conn->close();
-  //header("location: blog.php");
+  header("location: blog.php");
 ?>

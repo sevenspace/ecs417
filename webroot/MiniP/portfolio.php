@@ -1,4 +1,3 @@
-
 <html>
 	<header lang="en">
 		<meta charset ="utf-8">
@@ -119,7 +118,7 @@
 		</div>
 
 		<figure>
-			<img class="img5" src="project.png" alt="graphics" width="380" height="240">
+			<img class="img5" src="poster.JPG" alt="graphics" width="380" height="240">
 		</figure>
 
 		<figure>
