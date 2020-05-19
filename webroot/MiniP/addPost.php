@@ -24,8 +24,10 @@
 
   else
   {
-    //$sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('$title','$name','$posts','$date','$time')";
-      $sql = "INSERT INTO `blogposts`(`title`, `username`, `posts`, `date`, `time`) VALUES ('$title','$name','$posts','$date','$time')";
+  //  $sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('$title','$name','$posts','$date','$time')";
+    //  $sql = "INSERT INTO `blogposts`(`title`, `username`, `posts`, `date`, `time`) VALUES ('$title','$name','$posts','$date','$time')";
+$sql = "INSERT INTO blogposts (title, username, posts, date, time) VALUES ('" . $title . "', '" . $name . "','" . $posts . "','" . $date . "','" . $time . "')";
+
     if(mysqli_query($conn, $sql)){
         echo "<script>
                 alert('Blog Entry Added!');
